@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLifeJourney</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <h1>MyLifeJourney</h1>
+        <p>Ласкаво просимо у світ <strong>життєвих спогадів</strong>!</p>
+    </header>
+    
+    <!-- Про сайт -->
+    <section id="about">
+        <h2>Про сайт</h2>
+        <p>Цей сайт створений для того, щоб зберігати всі важливі моменти від народження до 18-річчя.</p>
+    </section>
+
+    <!-- Хронологія подій -->
+    <section id="timeline">
+        <h2>Хронологія подій</h2>
+        <div id="timeline-content">
+            <!-- Події будуть додаватися сюди -->
+        </div>
+        <form id="event-form">
+            <h3>Додати подію</h3>
+            <label for="event-year">Рік:</label>
+            <input type="number" id="event-year" placeholder="Наприклад, 2024" required>
+            <label for="event-description">Опис події:</label>
+            <textarea id="event-description" rows="4" placeholder="Напишіть тут..." required></textarea>
+            <button type="submit">Додати подію</button>
+        </form>
+    </section>
+    
+    <!-- Фотоальбом -->
+    <section id="photo-gallery">
+        <h2>Фотоальбом</h2>
+        <input type="file" id="photo-upload" accept="image/*">
+        <button id="upload-photo">Завантажити фото</button>
+        <div id="photo-gallery-content"></div>
+    </section>
+
+    <!-- Відеоальбом -->
+    <section id="video-gallery">
+        <h2>Відеоальбом</h2>
+        <input type="file" id="video-upload" accept="video/*">
+        <button id="upload-video">Завантажити відео</button>
+        <div id="video-gallery-content"></div>
+    </section>
+
+
+    <!-- Музика та звуки -->
+    <section id="music">
+        <h2>Улюблені мелодії</h2>
+        <audio controls>
+            <source src="favorite-song.mp3" type="audio/mpeg">
+            Ваш браузер не підтримує аудіо.
+        </audio>
+    </section>
+
+    <!-- Повідомлення від сім'ї -->
+    <section id="letters">
+        <h2>Листи від батьків</h2>
+        <div id="letters-list">
+            <!-- Листи будуть додаватися сюди -->
+        </div>
+        <form id="letter-form">
+            <h3>Додати лист</h3>
+            <label for="letter-from">Хто пише:</label>
+            <input type="text" id="letter-from" placeholder="Наприклад, Тато" required>
+            <label for="letter-content">Текст листа:</label>
+            <textarea id="letter-content" rows="4" placeholder="Напишіть тут..." required></textarea>
+            <button type="submit">Додати лист</button>
+        </form>
+    </section>
+
+    <!-- Особисті досягнення -->
+    <section id="achievements">
+        <h2>Особисті досягнення</h2>
+        <ul id="achievements-list">
+            <!-- Досягнення будуть додаватися сюди -->
+        </ul>
+        <form id="achievement-form">
+            <h3>Додати досягнення</h3>
+            <label for="achievement-title">Назва досягнення:</label>
+            <input type="text" id="achievement-title" placeholder="Назва досягнення" required>
+            <label for="achievement-description">Опис:</label>
+            <textarea id="achievement-description" rows="4" placeholder="Опис досягнення" required></textarea>
+            <label for="achievement-sticker">Стікер/Гіфка URL:</label>
+            <input type="text" id="achievement-sticker" placeholder="URL стікера або гіфки" required>
+            <button type="submit">Додати досягнення</button>
+        </form>
+    </section>
+
+    <!-- Часова капсула -->
+    <section id="time-capsule">
+        <h2>Часова капсула</h2>
+        <div id="capsule-content">
+            <p>Це повідомлення відкриється 1 січня 2042 року.</p>
+            <button id="reveal-message" style="display:none;">Відкрити повідомлення</button>
+            <p id="hidden-message" style="display:none;">Вітаю тебе з 18-річчям! Ми пишаємося тобою...</p>
+        </div>
+    </section>
+
+    <!-- Іконка налаштувань -->
+    <div id="settings-icon" style="position: fixed; top: 20px; right: 20px; cursor: pointer;">
+        ⚙️
+    </div>
+
+    <!-- Панель налаштувань -->
+    <div id="settings-panel" style="display: none; position: fixed; top: 60px; right: 20px; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+        <h3>Налаштування</h3>
+        <label for="theme-select">Вибрати тему:</label>
+        <select id="theme-select">
+            <option value="light">Світла тема</option>
+            <option value="dark">Темна тема</option>
+        </select>
+
+        <label for="background-image">Завантажити фон:</label>
+        <input type="file" id="background-image" accept="image/*">
+
+        <label for="highlight-color">Колір підсвітки:</label>
+        <input type="color" id="highlight-color" value="#4682b4">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MyLifeJourney. Усі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
